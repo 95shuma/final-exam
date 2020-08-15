@@ -1,0 +1,7 @@
+create table users (
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    password VARCHAR(60) NOT NULL,
+    role VARCHAR(10) NOT NULL DEFAULT 'ROLE_USER',
+    enabled TINYINT NOT NULL DEFAULT 1
+)

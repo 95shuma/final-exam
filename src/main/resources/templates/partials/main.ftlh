@@ -62,7 +62,7 @@
                         <h5 class="modal-title text-uppercase" id="exampleModalLabel">Registration</h5>
                     </div>
                     <div class="modal-body">
-                        <form id="form-comment" action="" method="post">
+                        <form id="form-comment" action="/reg-user" method="post">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input minlength="1" maxlength="20" name="name" type="text" class="form-control" id="name" placeholder="Name">

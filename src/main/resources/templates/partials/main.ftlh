@@ -1,4 +1,4 @@
-<#macro renderWith title="Welcome to Cafe Critic!" scripts=["https://code.jquery.com/jquery-3.4.1.slim.min.js","https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js","https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"] styles=["css/main.css","https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css","https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"]>
+<#macro renderWith title="Welcome to Cafe Critic!" scripts=["https://code.jquery.com/jquery-3.4.1.slim.min.js","https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js","https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"] styles=[]>
     <!doctype html>
     <html lang="en">
     <head>
@@ -7,7 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>${title}</title>
-
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <#list styles as styleSource>
             <link rel="stylesheet" href="${styleSource}">
         </#list>
@@ -41,7 +43,7 @@
                     <form action="/logout" method="post" id="form-logout" class="flex box-128">
                         <button type="submit" class="flex box-128 logout-button btn btn-light"> Logout </button>
                     </form>
-                    <a href="" class="btn btn-primary"><h6> Add new place</h6></a>
+                    <a href="/user/add-place" class="btn btn-primary"><h6> Add new place</h6></a>
                 </div>
             <#else>
                 <div class="col-3">

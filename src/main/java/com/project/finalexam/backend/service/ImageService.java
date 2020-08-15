@@ -15,15 +15,16 @@ public class ImageService {
     @Autowired
     ImageRepo imageRepo;
 
-    public void saveImage(MultipartFile file) {
+    /*public void saveImage(MultipartFile file) {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         try {
-            Image image = new Image(fileName,file.getContentType(),file.getBytes());
+            Image image = Image
+                    new Image(fileName,file.getContentType(),file.getBytes());
             imageRepo.save(image);
         } catch (IOException e) {
             System.out.println(e);
         }
-    }
+    }*/
 
     public Image getImage(Integer id){
         return imageRepo.findById(id).get();

@@ -1,5 +1,6 @@
 package com.project.finalexam.backend.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -26,13 +27,14 @@ public class Image {
     @JoinColumn(name = "place_id")
     private Place place;
 
-    public Image() {
+    public Image(){
     }
 
-    public Image(String name, String type, byte[] data) {
+    public Image(String name, String type, byte[] data, Place place) {
         this.name = name;
         this.type = type;
         this.data = data;
+        this.place = place;
     }
 
 }

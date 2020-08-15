@@ -24,6 +24,8 @@ public class PreloadDB {
                     .password(encoder.encode("user"))
                     .build();
             ur.save(user);
+
+            System.out.println("http://localhost:7777/");
         };
     }
 }

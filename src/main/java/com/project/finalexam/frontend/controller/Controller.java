@@ -2,6 +2,7 @@ package com.project.finalexam.frontend.controller;
 
 import com.project.finalexam.backend.model.Image;
 import com.project.finalexam.backend.model.User;
+import com.project.finalexam.backend.repository.ImageRepo;
 import com.project.finalexam.backend.repository.UserRepo;
 import com.project.finalexam.backend.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class Controller {
     @Autowired
     UserRepo userRepo;
 
+    @Autowired
+    ImageRepo imageRepo;
+
     @GetMapping("/user/img")
     public String getIm(){
         return "imageAdd";
@@ -32,6 +36,7 @@ public class Controller {
             model.addAttribute("user",user);
         }catch (Exception e){
         }
+        model.addAttribute("places",imageRepo.findAll());
         return "index";
     }
 

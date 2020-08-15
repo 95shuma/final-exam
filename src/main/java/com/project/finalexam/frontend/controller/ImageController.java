@@ -15,7 +15,7 @@ public class ImageController {
     @Autowired
     ImageService imageService;
 
-    @GetMapping("/user/image/{id}")
+    @GetMapping("/image/{id}")
     public ResponseEntity<byte[]> getImg(@PathVariable("id")Integer id) {
         Image image = imageService.getImage(id);
         return ResponseEntity.ok()
@@ -23,8 +23,8 @@ public class ImageController {
                 .body(image.getData());
     }
 
-    @PostMapping("/user/add-img")
+    /*@PostMapping("/user/add-img")
     public void savImg(@RequestParam("file") MultipartFile file){
         imageService.saveImage(file);
-    }
+    }*/
 }
